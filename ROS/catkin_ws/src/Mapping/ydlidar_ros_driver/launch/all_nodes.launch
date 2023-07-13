@@ -1,0 +1,17 @@
+<launch>
+
+     <include file="$(find ydlidar_ros_driver)/launch/X4.launch" />    
+
+     <node pkg ="tf" type="static_transform_publisher" name="map_to_odom" args="0.0 0.0 0.0 0.0 0.0 0.0 /map /nav 40"/>
+
+     <node pkg ="tf" type="static_transform_publisher" name="odom_to_base_link" args="0.0 0.0 0.0 0.0 0.0 0.0 /nav /base_footprint 40"/>
+
+     <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.2245 0.0 0.2 0.0 0.0 0.0 /base_footprint /laser_frame 40" />
+
+     <include file="$(find hector_mapping)/launch/mapping_default.launch" />
+
+     <node pkg="rviz" name="rviz" type="rviz" args="-d $(find ydlidar_ros_driver)/launch/lidar.rviz" />
+
+     <include file="$(find hector_geotiff)/launch/geotiff_mapper.launch" />
+
+</launch>
