@@ -1,0 +1,120 @@
+function [theta1,theta2,theta3,D1,D2,D3,x1Sol,x2Sol,y1Sol,y2Sol] = fcn(xi,yi,alfa_i,Ri,xf,yf,alfa_f,Rf,H)
+
+%H=200;
+%Ri=100;Rf=100;
+%xi=0; yi=0; alfa_i=0*pi/180;
+%xf=5000; yf=5000; alfa_f=45*pi/180;
+
+
+xc1=xf-Rf*sin(alfa_f);
+yc1=yf+Rf*cos(alfa_f);
+xc2=xi-Ri*sin(alfa_i);
+yc2=yi+Ri*cos(alfa_i);
+
+%v1=[(x1-xc1),(y1-yc1),0];
+%v2=[(x1-x2),(y1-y2)],0;
+%v3=[(x2-xc2),(y2-yc2),0];
+
+%syms syms x1 y1 x2 y2 xc1 yc1 xc2 yc2 Rf Ri
+%eqn1 = ((x1-xc1)*(x2-x1)+(y1-yc1)*(y2-y1)) == 0;
+%eqn2 = ((x1 - xc1)*(y2 - yc2) - (x2 - xc2)*(y1 - yc1)) == 0;
+%eqn3 = (x1-xc1)^2 + (y1-yc1)^2 == (Rf)^2;
+%eqn4 = (x2-xc2)^2 + (y2-yc2)^2 == (Ri)^2;
+
+%sol = solve([eqn1, eqn2, eqn3, eqn4], [x1, y1, x2, y2]);
+%x1Sol = sol.x1
+%y1Sol = sol.y1
+%x2Sol = sol.x2
+%y2Sol = sol.y2
+
+
+x1Sol =((Rf*yc1 - Rf*yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(Ri*(xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)) - (Rf^2*Ri + Rf*Ri^2 - Rf*yc2^2 + yc1*Rf*yc2 - Ri*xc1^2 + xc2*Ri*xc1)/(Ri*(xc1 - xc2));
+
+%   ((Rf*yc1 - Rf*yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(Ri*(xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)) - (Rf^2*Ri + Rf*Ri^2 - Rf*yc2^2 + yc1*Rf*yc2 - Ri*xc1^2 + xc2*Ri*xc1)/(Ri*(xc1 - xc2));
+%   ((Rf*yc1 - Rf*yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 - Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(Ri*(xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)) - (Rf^2*Ri + Rf*Ri^2 - Rf*yc2^2 + yc1*Rf*yc2 - Ri*xc1^2 + xc2*Ri*xc1)/(Ri*(xc1 - xc2));
+% (- Rf^2*Ri + Rf*Ri^2 - Rf*yc2^2 + yc1*Rf*yc2 + Ri*xc1^2 - xc2*Ri*xc1)/(Ri*(xc1 - xc2)) - ((Rf*yc1 - Rf*yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Rf*Ri*yc1 + Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(Ri*(xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2));
+% (- Rf^2*Ri + Rf*Ri^2 - Rf*yc2^2 + yc1*Rf*yc2 + Ri*xc1^2 - xc2*Ri*xc1)/(Ri*(xc1 - xc2)) - ((Rf*yc1 - Rf*yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 - Ri*xc1*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Ri*xc2*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Rf*Ri*yc1 + Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(Ri*(xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2));
+ 
+ 
+y1Sol =(Rf*yc2 + Ri*yc1 - (Rf*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2))/Ri;
+ 
+% (Rf*yc2 + Ri*yc1 - (Rf*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2))/Ri;
+% (Rf*yc2 + Ri*yc1 - (Rf*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 - Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2))/Ri;
+% (Ri*yc1 - Rf*yc2 + (Rf*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Rf*Ri*yc1 + Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2))/Ri;
+% (Ri*yc1 - Rf*yc2 + (Rf*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 - Ri*xc1*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Ri*xc2*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Rf*Ri*yc1 + Rf*Ri*yc2 - 2*xc1*xc2*yc2))/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2))/Ri;
+ 
+ 
+x2Sol = (Ri^2 + Rf*Ri - xc2^2 + xc1*xc2 - yc2^2 + yc1*yc2)/(xc1 - xc2) - ((yc1 - yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/((xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2));
+
+%     (Ri^2 + Rf*Ri - xc2^2 + xc1*xc2 - yc2^2 + yc1*yc2)/(xc1 - xc2) - ((yc1 - yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/((xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2));
+%     (Ri^2 + Rf*Ri - xc2^2 + xc1*xc2 - yc2^2 + yc1*yc2)/(xc1 - xc2) - ((yc1 - yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 - Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2))/((xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2));
+% - (- Ri^2 + Rf*Ri + xc2^2 - xc1*xc2 + yc2^2 - yc1*yc2)/(xc1 - xc2) - ((yc1 - yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Rf*Ri*yc1 + Rf*Ri*yc2 - 2*xc1*xc2*yc2))/((xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2));
+% - (- Ri^2 + Rf*Ri + xc2^2 - xc1*xc2 + yc2^2 - yc1*yc2)/(xc1 - xc2) - ((yc1 - yc2)*(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 - Ri*xc1*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Ri*xc2*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Rf*Ri*yc1 + Rf*Ri*yc2 - 2*xc1*xc2*yc2))/((xc1 - xc2)*(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2));
+  
+y2Sol =(Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2)/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2);
+
+% (Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2)/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2);
+% (Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 - Ri*xc1*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Ri*xc2*(- Rf^2 - 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Rf*Ri*yc1 - Rf*Ri*yc2 - 2*xc1*xc2*yc2)/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2);
+% (Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 + Ri*xc1*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Ri*xc2*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Rf*Ri*yc1 + Rf*Ri*yc2 - 2*xc1*xc2*yc2)/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2);
+% (Ri^2*yc1 - Ri^2*yc2 + xc1^2*yc2 + xc2^2*yc2 - 2*yc1*yc2^2 + yc1^2*yc2 + yc2^3 - Ri*xc1*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) + Ri*xc2*(- Rf^2 + 2*Rf*Ri - Ri^2 + xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2)^(1/2) - Rf*Ri*yc1 + Rf*Ri*yc2 - 2*xc1*xc2*yc2)/(xc1^2 - 2*xc1*xc2 + xc2^2 + yc1^2 - 2*yc1*yc2 + yc2^2);
+ 
+d2x1=cos(alfa_i);
+d2y1=sin(alfa_i);
+d2x2=x2Sol-xi;
+d2y2=y2Sol-yi;
+Cross2=(d2x1*d2y2-d2y1*d2x2);
+
+d1x1=cos(alfa_f);
+d1y1=sin(alfa_f);
+d1x2=x1Sol-xf;
+d1y2=y1Sol-yf;
+Cross1=(d1x1*d1y2-d1y1*d1x2);
+
+if (Cross2 > 0)
+   sign_1st=-1;
+else  
+    sign_1st=1;
+end 
+
+if (Cross1 > 0)
+   sign_2nd=-1;
+else  
+    sign_2nd=1;
+end 
+
+theta1=sign_1st*(90-atand(Ri/H));
+theta2=0.000001;
+theta3=sign_2nd*(90-atand(Rf/H));
+
+%sign_1st*(90-atand(Ri/H));
+%sign_1st*
+%sign_2nd*
+
+Slope1=((yc2-yi)/(xc2-xi));
+Slope2=((y1Sol-y2Sol)/(x1Sol-x2Sol));
+Slope3=((yf-y1Sol)/(xf-x1Sol));
+
+if (Cross2 < 0)
+   s_1st=-1;
+else  
+    s_1st=1;
+end 
+
+if (Slope2< 0)
+   s_2nd=-1;
+else  
+    s_2nd=1;
+end 
+if (Slope3< 0)
+   s_3rd=-1;
+else  
+    s_3rd=1;
+end 
+
+D1=s_1st*Ri*acos((((x2Sol-xc2)*(xi-xc2)+(y2Sol-yc2)*(yi-yc2))/Ri^2)-9e-15);
+D2=((x1Sol-x2Sol)^2+(y1Sol-y2Sol)^2)^0.5;
+D3=Rf*acos((((x1Sol-xc1)*(xf-xc1)+(y1Sol-yc1)*(yf-yc1))/Rf^2)-9e-15);
+
+%s_1st*
+%s_1st*s_2nd*
+%s_1st*s_2nd*s_3rd*
