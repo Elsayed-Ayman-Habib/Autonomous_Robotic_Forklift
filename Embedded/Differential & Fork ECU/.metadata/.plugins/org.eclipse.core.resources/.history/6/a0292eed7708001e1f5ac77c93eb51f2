@@ -1,0 +1,219 @@
+/**********************************************************************************************************************
+ *  FILE DESCRIPTION
+ *  -----------------------------------------------------------------------------------------------------------------*/
+/**        \file  App.c
+ *        \brief  Application Driver
+ *
+ *      \details  Source File For Application Driver
+ *
+ *
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  INCLUDES
+ *********************************************************************************************************************/
+#include "Std_Types.h"
+#include "App.h"
+#include "Port.h"
+#include "Dio.h"
+#include "Gptm.h"
+#include "IntCtrl.h"
+#include "Adc.h"
+#include "Uart.h"
+#include "PID.h"
+#include "Speed.h"
+#include "PWM.h"
+#include "Steering.h"
+#include "Buzzer.h"
+#include "Encoder.h"
+/**********************************************************************************************************************
+ *  LOCAL MACROS CONSTANT\FUNCTION
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  LOCAL DATA
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  GLOBAL DATA
+ *********************************************************************************************************************/
+uint8 Bluetooth_Value;
+float32 output ;
+float32 measurement;
+/**********************************************************************************************************************
+ *  LOCAL FUNCTION PROTOTYPES
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  LOCAL FUNCTIONS
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ *  GLOBAL FUNCTIONS
+ *********************************************************************************************************************/
+/******************************************************************************
+ * \SyntaBluetooth_Value          : Std_ReturnType FunctionName(AnyType parameterName)
+ * \Description     : Describe this service
+ *
+ * \Sync\Async      : Synchronous
+ * \Reentrancy      : Non Reentrant
+ * \Parameters (in) : parameterName   Parameter Describtion
+ * \Parameters (out): None
+ * \Return value:   : Std_ReturnType  E_OK
+ *                                    E_NOT_OK
+ *******************************************************************************/
+void Init_Drivers (void)
+{
+    //  Enable_Exceptions();
+    Dio_Init(&Dio_Configuration);
+    Port_Init(&Port_ConfigPtr);
+    // Uart_init(&Uart_ConfigPtr);
+    // Gpt_init(&Gpt_ConfigPtr);
+    //  Gpt_StartTimer (TIMER0_A,62500);
+    //Gpt_StartTimer (TIMER1_A,62500);
+    // Gpt_EnableNotification(TIMER1_A);
+    //  ADC_InitChannel(&Adc_ConfigPtr);
+    Pwm_Init(&Pwm_ConfigPtr);
+    EncoderChannelA_Init (&Encoder_ConfigPtr1);
+    EncoderChannelB_Init (&Encoder_ConfigPtr2);
+    IntCtrl_init(&IntCtrl_ConfigPtr);
+
+}
+
+/******************************************************************************
+ * \SyntaBluetooth_Value          : Std_ReturnType FunctionName(AnyType parameterName)
+ * \Description     : Describe this service
+ *
+ * \Sync\Async      : Synchronous
+ * \Reentrancy      : Non Reentrant
+ * \Parameters (in) : parameterName   Parameter Describtion
+ * \Parameters (out): None
+ * \Return value:   : Std_ReturnType  E_OK
+ *                                    E_NOT_OK
+ *******************************************************************************/
+void Timer0A_ISR()
+{
+    TICKS++;
+}
+
+/******************************************************************************
+ * \SyntaBluetooth_Value          : Std_ReturnType FunctionName(AnyType parameterName)
+ * \Description     : Describe this service
+ *
+ * \Sync\Async      : Synchronous
+ * \Reentrancy      : Non Reentrant
+ * \Parameters (in) : parameterName   Parameter Describtion
+ * \Parameters (out): None
+ * \Return value:   : Std_ReturnType  E_OK
+ *                                    E_NOT_OK
+ *******************************************************************************/
+
+void Delay(unsigned long counter)
+{
+    unsigned long i = 0;
+
+    for(i=0; i< counter*1000; i++);
+}
+/******************************************************************************
+ * \SyntaBluetooth_Value          : Std_ReturnType FunctionName(AnyType parameterName)
+ * \Description     : Describe this service
+ *
+ * \Sync\Async      : Synchronous
+ * \Reentrancy      : Non Reentrant
+ * \Parameters (in) : parameterName   Parameter Describtion
+ * \Parameters (out): None
+ * \Return value:   : Std_ReturnType  E_OK
+ *                                    E_NOT_OK
+ *******************************************************************************/
+void Timer1A_ISR()
+{
+    TICKS1++;
+}
+
+/******************************************************************************
+ * \SyntaBluetooth_Value          : Std_ReturnType FunctionName(AnyType parameterName)
+ * \Description     : Describe this service
+ *
+ * \Sync\Async      : Synchronous
+ * \Reentrancy      : Non Reentrant
+ * \Parameters (in) : parameterName   Parameter Describtion
+ * \Parameters (out): None
+ * \Return value:   : Std_ReturnType  E_OK
+ *                                    E_NOT_OK
+ *******************************************************************************/
+uint8 Time_Sec (LedSec sec)
+{
+    uint8 Time ;
+    Time = sec ;
+    return Time;
+}
+/******************************************************************************
+ * \SyntaBluetooth_Value          : Std_ReturnType FunctionName(AnyType parameterName)
+ * \Description     : Describe this service
+ *
+ * \Sync\Async      : Synchronous
+ * \Reentrancy      : Non Reentrant
+ * \Parameters (in) : parameterName   Parameter Describtion
+ * \Parameters (out): None
+ * \Return value:   : Std_ReturnType  E_OK
+ *                                    E_NOT_OK
+ *******************************************************************************/
+
+void App_Start (void)
+{
+
+//    PID_Conroller test1;
+//    test1.ki=30;
+//    test1.kp=1500;
+//    test1.kd=0.5;
+//    test1.MaxLevel=1000;
+//    test1.Minlevel=-1000;
+//    test1.IntMaxLevel=700;
+//    test1.IntMinLevel=-700;
+//    test1.T=1;
+//
+//    float32 SetPoint=-1.0;
+//    PID_Conroller* ptr=&test1;
+//    PID_init(ptr);
+//
+//    //    Stop = 'A';
+//    float32 measurement=0;
+//    while(1)
+//    {
+//
+//        measurement=encoder_pos/1031.0;
+//
+//
+//        PID_Compute(ptr,SetPoint, measurement);
+//        //   float32 output=(test1.Output)/100;
+//
+//        if (test1.Output >0.0)
+//        {
+            set_DutyCycle( PWM0_PB5 , 0.5  ,DOWN_MODE);
+            Dio_WriteChannel(DioConf_M3_INT1_CHANNEL_ID_INDEX, STD_HIGH);
+            Dio_WriteChannel(DioConf_M3_INT2_CHANNEL_ID_INDEX, STD_LOW);
+//        }
+//        if (test1.Output < 0.0)
+//        {
+//
+//            set_DutyCycle( PWM0_PB5 , (1.0-(1.0-((test1.Output)))/1000.0) ,DOWN_MODE);
+//            Dio_WriteChannel(DioConf_M3_INT1_CHANNEL_ID_INDEX,STD_LOW );
+//            Dio_WriteChannel(DioConf_M3_INT2_CHANNEL_ID_INDEX, STD_HIGH);
+//        }
+//
+//        if (test1.Output == 0.0 )
+//        {
+//            set_DutyCycle( PWM0_PB5 , Duty0 ,DOWN_MODE);
+//            Dio_WriteChannel(DioConf_M3_INT1_CHANNEL_ID_INDEX,STD_LOW );
+//            Dio_WriteChannel(DioConf_M3_INT2_CHANNEL_ID_INDEX, STD_LOW);
+//            // Stop = 'F' ;
+//        }
+//
+//    }
+
+}
+
+
+
+/**********************************************************************************************************************
+ *  END OF FILE: FileName.c
+ *********************************************************************************************************************/

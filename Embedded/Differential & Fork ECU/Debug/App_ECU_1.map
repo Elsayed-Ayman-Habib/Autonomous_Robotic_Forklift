@@ -1,0 +1,549 @@
+******************************************************************************
+                  TI ARM Linker PC v20.2.7                     
+******************************************************************************
+>> Linked Sun Jun 25 09:50:26 2023
+
+OUTPUT FILE NAME:   <App_ECU_1.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00006d65
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  0000770b  000388f5  R  X
+  SRAM                  20000000   00008000  000008f5  0000770b  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00007710   00007710    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00006bf2   00006bf2    r-x .text
+  00006e60    00006e60    0000021d   0000021d    r-- .const
+  00007080    00007080    00000690   00000690    r-- .cinit
+20000000    20000000    000008f9   00000000    rw-
+  20000000    20000000    00000664   00000000    rw- .data
+  20000668    20000668    00000200   00000000    rw- .stack
+  20000868    20000868    00000091   00000000    rw- .bss
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    00006bf2     
+                  0000026c    00002c00     PWM.obj (.text)
+                  00002e6c    000010a8     Gptm.obj (.text)
+                  00003f14    00000afc     Uart.obj (.text)
+                  00004a10    0000068c     Port.obj (.text)
+                  0000509c    0000050c     Encoder.obj (.text)
+                  000055a8    00000508     IntCtrl.obj (.text)
+                  00005ab0    00000480     Adc.obj (.text)
+                  00005f30    00000330     Dio.obj (.text)
+                  00006260    0000029c     App.obj (.text)
+                  000064fc    0000024c     PID.obj (.text)
+                  00006748    000001b6     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_add_t2.asm.obj (.text)
+                  000068fe    00000136                                   : fd_div_t2.asm.obj (.text)
+                  00006a34    000000fc                                   : fd_mul_t2.asm.obj (.text)
+                  00006b30    0000009c                                   : memcpy_t2.asm.obj (.text)
+                  00006bcc    0000006e                                   : fd_tos_t2.asm.obj (.text)
+                  00006c3a    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00006ca2    00000002     --HOLE-- [fill = 0]
+                  00006ca4    00000044                                   : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00006ce8    00000044                                   : fd_tou_t2.asm.obj (.text)
+                  00006d2c    00000038                                   : fs_tod_t2.asm.obj (.text)
+                  00006d64    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  00006d98    0000002e                                   : i_tofd_t2.asm.obj (.text)
+                  00006dc6    0000002c                                   : ull_tofd_t2.asm.obj (.text)
+                  00006df2    00000020                                   : u_tofd_t2.asm.obj (.text)
+                  00006e12    0000001c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  00006e2e    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00006e3c    0000000e     main.obj (.text)
+                  00006e4a    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00006e56    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00006e5a    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.const     0    00006e60    0000021d     
+                  00006e60    0000012d     Port_Lcfg.obj (.const:Port_ConfigPtr)
+                  00006f8d    00000003     --HOLE-- [fill = 0]
+                  00006f90    0000003c     Gpt_Lcfg.obj (.const:Gpt_ConfigPtr)
+                  00006fcc    00000030     Uart_Lcfg.obj (.const:Uart_ConfigPtr)
+                  00006ffc    0000002a     Dio_PBcfg.obj (.const:Dio_Configuration)
+                  00007026    00000002     --HOLE-- [fill = 0]
+                  00007028    00000020     Encoder.obj (.const)
+                  00007048    00000020     PWM_Lcfg.obj (.const:Pwm_ConfigPtr)
+                  00007068    00000007     Adc_Lcfg.obj (.const:Adc_ConfigPtr)
+                  0000706f    00000006     IntCtrl_Lcfg.obj (.const:IntCtrl_ConfigPtr)
+                  00007075    00000004     Encoder_Lcfg.obj (.const:Encoder_ConfigPtr1)
+                  00007079    00000004     Encoder_Lcfg.obj (.const:Encoder_ConfigPtr2)
+
+.cinit     0    00007080    00000690     
+                  00007080    00000667     (.cinit..data.load) [load image, compression = lzss]
+                  000076e7    00000001     --HOLE-- [fill = 0]
+                  000076e8    0000000c     (__TI_handler_table)
+                  000076f4    00000004     --HOLE-- [fill = 0]
+                  000076f8    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00007700    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.data      0    20000000    00000664     UNINITIALIZED
+                  20000000    000005a4     Encoder.obj (.data:Result_Value)
+                  200005a4    00000040     Uart.obj (.data)
+                  200005e4    0000002c     App.obj (.data)
+                  20000610    0000001c     Encoder.obj (.data)
+                  2000062c    00000009     Dio.obj (.data)
+                  20000635    00000003     --HOLE--
+                  20000638    00000005     Adc.obj (.data)
+                  2000063d    00000003     --HOLE--
+                  20000640    00000005     Gptm.obj (.data)
+                  20000645    00000003     --HOLE--
+                  20000648    00000005     IntCtrl.obj (.data)
+                  2000064d    00000003     --HOLE--
+                  20000650    00000005     PWM.obj (.data)
+                  20000655    00000003     --HOLE--
+                  20000658    00000005     Port.obj (.data)
+                  2000065d    00000003     --HOLE--
+                  20000660    00000004     Steering.obj (.data)
+
+.bss       0    20000868    00000091     UNINITIALIZED
+                  20000868    0000000c     Gptm.obj (.bss:GptNotification)
+                  20000874    0000000c     (.common:receive_buffer_1)
+                  20000880    0000000c     (.common:sending_buffer_1)
+                  2000088c    0000000c     (.common:value_string_1)
+                  20000898    00000008     (.common:TICKS)
+                  200008a0    00000008     (.common:TICKS1)
+                  200008a8    00000008     (.common:delta_t)
+                  200008b0    00000008     (.common:distance)
+                  200008b8    00000008     (.common:prevTime)
+                  200008c0    00000008     (.common:velWheel)
+                  200008c8    00000004     (.common:Fractional_part_esp_1)
+                  200008cc    00000004     (.common:Fractional_part_esp_2)
+                  200008d0    00000004     (.common:Integer_Fractional_part_esp_1)
+                  200008d4    00000004     (.common:Integer_Fractional_part_esp_2)
+                  200008d8    00000004     (.common:Integer_Part_esp_1)
+                  200008dc    00000004     (.common:Integer_Part_esp_2)
+                  200008e0    00000004     (.common:Numbers_Send_esp_1)
+                  200008e4    00000004     (.common:Numbers_Send_esp_2)
+                  200008e8    00000004     (.common:Size_FLoat)
+                  200008ec    00000004     (.common:Size_Int_Left)
+                  200008f0    00000004     (.common:Size_Int_Right)
+                  200008f4    00000004     (.common:prevWheelCount)
+                  200008f8    00000001     (.common:incoming_1)
+
+.stack     0    20000668    00000200     UNINITIALIZED
+                  20000668    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  2000066c    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    .\
+       PWM.obj                        11264   0         5      
+       Gptm.obj                       4264    0         17     
+       Uart.obj                       2812    0         64     
+       Encoder.obj                    1292    32        1520   
+       Port.obj                       1676    0         5      
+       IntCtrl.obj                    1288    0         5      
+       Adc.obj                        1152    0         5      
+       Dio.obj                        816     0         9      
+       App.obj                        668     0         129    
+       tm4c123gh6pm_startup_ccs.obj   12      620       0      
+       PID.obj                        588     0         0      
+       Port_Lcfg.obj                  0       301       0      
+       Gpt_Lcfg.obj                   0       60        0      
+       Uart_Lcfg.obj                  0       48        0      
+       Dio_PBcfg.obj                  0       42        0      
+       PWM_Lcfg.obj                   0       32        0      
+       main.obj                       14      0         0      
+       Encoder_Lcfg.obj               0       8         0      
+       Adc_Lcfg.obj                   0       7         0      
+       IntCtrl_Lcfg.obj               0       6         0      
+       Steering.obj                   0       0         4      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         25846   1156      1763   
+                                                               
+    C:\ti\ccs1220\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       fd_add_t2.asm.obj              438     0         0      
+       fd_div_t2.asm.obj              310     0         0      
+       fd_mul_t2.asm.obj              252     0         0      
+       memcpy_t2.asm.obj              156     0         0      
+       fd_tos_t2.asm.obj              110     0         0      
+       copy_decompress_lzss.c.obj     104     0         0      
+       autoinit.c.obj                 68      0         0      
+       fd_tou_t2.asm.obj              68      0         0      
+       fs_tod_t2.asm.obj              56      0         0      
+       boot_cortex_m.c.obj            52      0         0      
+       i_tofd_t2.asm.obj              46      0         0      
+       ull_tofd_t2.asm.obj            44      0         0      
+       u_tofd_t2.asm.obj              32      0         0      
+       copy_zero_init.c.obj           28      0         0      
+       copy_decompress_none.c.obj     14      0         0      
+       exit.c.obj                     4       0         0      
+       pre_init.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         1786    0         0      
+                                                               
+       Stack:                         0       0         512    
+       Linker Generated:              0       1675      0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   27632   2831      2275   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00007700 records: 2, size/record: 8, table size: 16
+	.data: load addr=00007080, load size=00000667 bytes, run addr=20000000, run size=00000664 bytes, compression=lzss
+	.bss: load addr=000076f8, load size=00000008 bytes, run addr=20000868, run size=00000091 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 000076e8 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+00005efd  ADC_Convert                   
+00005ea1  ADC_GetSamples                
+00005ab1  ADC_InitChannel               
+00007068  Adc_ConfigPtr                 
+200005e8  Angular_Vel                   
+0000631b  App_Start                     
+00006e5b  C$$EXIT                       
+00002705  Clear_DutyCycle               
+00004635  Clear_Uart_Bus                
+000062c3  Delay                         
+00006ffc  Dio_Configuration             
+0000608f  Dio_FlipChannel               
+00005f31  Dio_Init                      
+00005f47  Dio_ReadChannel               
+00006169  Dio_ReadPort                  
+00005fed  Dio_WriteChannel              
+000061dd  Dio_WritePort                 
+0000509d  EncoderChannelA_Init          
+000051b9  EncoderChannelB_Init          
+00007075  Encoder_ConfigPtr1            
+00007079  Encoder_ConfigPtr2            
+0000550f  Encoder_GetPosition           
+200005bc  FBRD_SAVE                     
+200005c0  FBRD_VALUE                    
+00004711  Float_to_chars_esp            
+200008c8  Fractional_part_esp_1         
+200008cc  Fractional_part_esp_2         
+0000538d  GPIOPortB_Handler             
+00006f90  Gpt_ConfigPtr                 
+00003401  Gpt_DisableNotification       
+00003547  Gpt_EnableNotification        
+00003a5d  Gpt_GetTimerElapsed           
+00003695  Gpt_StartTimer                
+000038cb  Gpt_StopTimer                 
+00003c81  Gpt_TimerRemaining            
+00002e6d  Gpt_init                      
+200005b8  IBRD_SAVE                     
+200005b4  IBRD_VALUE                    
+00006261  Init_Drivers                  
+0000706f  IntCtrl_ConfigPtr             
+2000061c  IntCtrl_Status                
+000055a9  IntCtrl_init                  
+200008d0  Integer_Fractional_part_esp_1 
+200008d4  Integer_Fractional_part_esp_2 
+200008d8  Integer_Part_esp_1            
+200008dc  Integer_Part_esp_2            
+000059e9  Interrupt_Pending             
+20000628  Left_Ticks                    
+200005f0  Number_1_Encoder              
+200005d0  Number_esp_1                  
+200005dc  Number_esp_2                  
+200005f4  Numbers_Send_PID              
+200008e0  Numbers_Send_esp_1            
+200008e4  Numbers_Send_esp_2            
+0000651f  PID_Compute                   
+000064fd  PID_init                      
+00006e60  Port_ConfigPtr                
+00004a11  Port_Init                     
+00007048  Pwm_ConfigPtr                 
+0000026d  Pwm_Init                      
+00006e4b  ResetISR                      
+20000000  Result_Value                  
+20000624  Right_Ticks                   
+00004379  Send_String                   
+200005ec  SetPoint                      
+20000608  SetPoint1                     
+2000060c  SetPoint2                     
+20000604  SetPoint_D                    
+20000660  SetPoint_S                    
+200008e8  Size_FLoat                    
+200008ec  Size_Int_Left                 
+200008f0  Size_Int_Right                
+20000600  Steering_Encoder              
+20000898  TICKS                         
+200008a0  TICKS1                        
+00007030  TICKS_PER_METER               
+00007028  TICKS_PER_RAD                 
+00003e7b  TIMER0A_Handler               
+00003e99  TIMER1A_Handler               
+00003eb7  TIMER2A_Handler               
+00006303  Time_Sec                      
+000062ab  Timer0A_ISR                   
+000062eb  Timer1A_ISR                   
+00006fcc  Uart_ConfigPtr                
+200005ac  Uart_Ptr_global               
+200005b0  Uart_Ptr_global_TX            
+000041e9  Uart_RX                       
+000042dd  Uart_TX                       
+00003f15  Uart_init                     
+00007040  WHEEL_BASE_H                  
+00007038  WHEEL_BASE_W                  
+20000868  __STACK_END                   
+00000200  __STACK_SIZE                  
+20000868  __STACK_TOP                   
+00007700  __TI_CINIT_Base               
+00007710  __TI_CINIT_Limit              
+000076e8  __TI_Handler_Table_Base       
+000076f4  __TI_Handler_Table_Limit      
+00006ca5  __TI_auto_init_nobinit_nopinit
+00006c3b  __TI_decompress_lzss          
+00006e2f  __TI_decompress_none          
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00000000  __TI_static_base__            
+00006e13  __TI_zero_init_nomemset       
+00006bcd  __aeabi_d2f                   
+00006ce9  __aeabi_d2uiz                 
+00006753  __aeabi_dadd                  
+000068ff  __aeabi_ddiv                  
+00006a35  __aeabi_dmul                  
+00006749  __aeabi_dsub                  
+00006d2d  __aeabi_f2d                   
+00006d99  __aeabi_i2d                   
+00006b31  __aeabi_memcpy                
+00006b31  __aeabi_memcpy4               
+00006b31  __aeabi_memcpy8               
+00006df3  __aeabi_ui2d                  
+00006dc7  __aeabi_ul2d                  
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+UNDEFED   __mpu_init                    
+20000668  __stack                       
+20000000  __start___llvm_prf_cnts       
+20000000  __stop___llvm_prf_cnts        
+00006d65  _c_int00_noargs               
+UNDEFED   _system_post_cinit            
+00006e57  _system_pre_init              
+00006e5b  abort                         
+ffffffff  binit                         
+000052d5  calc_vel_wheel                
+000043d3  combineCharsToInt             
+200008a8  delta_t                       
+200008b0  distance                      
+20000618  encoder_pos                   
+200005cc  fraction_num_esp_1            
+200005d8  fraction_num_esp_2            
+00000000  g_pfnVectors                  
+200008f8  incoming_1                    
+00004441  intToFloat                    
+200005e4  linear_Vel                    
+00006e3d  main                          
+200005fc  measurement                   
+00006b31  memcpy                        
+00003e75  millis                        
+0000439d  parse_message                 
+200008b8  prevTime                      
+200008f4  prevWheelCount                
+200005f8  ptr                           
+20000874  receive_buffer_1              
+200005c4  receive_index_1               
+20000880  sending_buffer_1              
+00001c9d  set_DutyCycle                 
+00004501  uart_receive_string_esp       
+200005e0  value_check                   
+2000088c  value_string_1                
+200008c0  velWheel                      
+200005c8  whole_num_esp_1               
+200005d4  whole_num_esp_2               
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_static_base__            
+00000000  g_pfnVectors                  
+00000200  __STACK_SIZE                  
+0000026d  Pwm_Init                      
+00001c9d  set_DutyCycle                 
+00002705  Clear_DutyCycle               
+00002e6d  Gpt_init                      
+00003401  Gpt_DisableNotification       
+00003547  Gpt_EnableNotification        
+00003695  Gpt_StartTimer                
+000038cb  Gpt_StopTimer                 
+00003a5d  Gpt_GetTimerElapsed           
+00003c81  Gpt_TimerRemaining            
+00003e75  millis                        
+00003e7b  TIMER0A_Handler               
+00003e99  TIMER1A_Handler               
+00003eb7  TIMER2A_Handler               
+00003f15  Uart_init                     
+000041e9  Uart_RX                       
+000042dd  Uart_TX                       
+00004379  Send_String                   
+0000439d  parse_message                 
+000043d3  combineCharsToInt             
+00004441  intToFloat                    
+00004501  uart_receive_string_esp       
+00004635  Clear_Uart_Bus                
+00004711  Float_to_chars_esp            
+00004a11  Port_Init                     
+0000509d  EncoderChannelA_Init          
+000051b9  EncoderChannelB_Init          
+000052d5  calc_vel_wheel                
+0000538d  GPIOPortB_Handler             
+0000550f  Encoder_GetPosition           
+000055a9  IntCtrl_init                  
+000059e9  Interrupt_Pending             
+00005ab1  ADC_InitChannel               
+00005ea1  ADC_GetSamples                
+00005efd  ADC_Convert                   
+00005f31  Dio_Init                      
+00005f47  Dio_ReadChannel               
+00005fed  Dio_WriteChannel              
+0000608f  Dio_FlipChannel               
+00006169  Dio_ReadPort                  
+000061dd  Dio_WritePort                 
+00006261  Init_Drivers                  
+000062ab  Timer0A_ISR                   
+000062c3  Delay                         
+000062eb  Timer1A_ISR                   
+00006303  Time_Sec                      
+0000631b  App_Start                     
+000064fd  PID_init                      
+0000651f  PID_Compute                   
+00006749  __aeabi_dsub                  
+00006753  __aeabi_dadd                  
+000068ff  __aeabi_ddiv                  
+00006a35  __aeabi_dmul                  
+00006b31  __aeabi_memcpy                
+00006b31  __aeabi_memcpy4               
+00006b31  __aeabi_memcpy8               
+00006b31  memcpy                        
+00006bcd  __aeabi_d2f                   
+00006c3b  __TI_decompress_lzss          
+00006ca5  __TI_auto_init_nobinit_nopinit
+00006ce9  __aeabi_d2uiz                 
+00006d2d  __aeabi_f2d                   
+00006d65  _c_int00_noargs               
+00006d99  __aeabi_i2d                   
+00006dc7  __aeabi_ul2d                  
+00006df3  __aeabi_ui2d                  
+00006e13  __TI_zero_init_nomemset       
+00006e2f  __TI_decompress_none          
+00006e3d  main                          
+00006e4b  ResetISR                      
+00006e57  _system_pre_init              
+00006e5b  C$$EXIT                       
+00006e5b  abort                         
+00006e60  Port_ConfigPtr                
+00006f90  Gpt_ConfigPtr                 
+00006fcc  Uart_ConfigPtr                
+00006ffc  Dio_Configuration             
+00007028  TICKS_PER_RAD                 
+00007030  TICKS_PER_METER               
+00007038  WHEEL_BASE_W                  
+00007040  WHEEL_BASE_H                  
+00007048  Pwm_ConfigPtr                 
+00007068  Adc_ConfigPtr                 
+0000706f  IntCtrl_ConfigPtr             
+00007075  Encoder_ConfigPtr1            
+00007079  Encoder_ConfigPtr2            
+000076e8  __TI_Handler_Table_Base       
+000076f4  __TI_Handler_Table_Limit      
+00007700  __TI_CINIT_Base               
+00007710  __TI_CINIT_Limit              
+20000000  Result_Value                  
+20000000  __start___llvm_prf_cnts       
+20000000  __stop___llvm_prf_cnts        
+200005ac  Uart_Ptr_global               
+200005b0  Uart_Ptr_global_TX            
+200005b4  IBRD_VALUE                    
+200005b8  IBRD_SAVE                     
+200005bc  FBRD_SAVE                     
+200005c0  FBRD_VALUE                    
+200005c4  receive_index_1               
+200005c8  whole_num_esp_1               
+200005cc  fraction_num_esp_1            
+200005d0  Number_esp_1                  
+200005d4  whole_num_esp_2               
+200005d8  fraction_num_esp_2            
+200005dc  Number_esp_2                  
+200005e0  value_check                   
+200005e4  linear_Vel                    
+200005e8  Angular_Vel                   
+200005ec  SetPoint                      
+200005f0  Number_1_Encoder              
+200005f4  Numbers_Send_PID              
+200005f8  ptr                           
+200005fc  measurement                   
+20000600  Steering_Encoder              
+20000604  SetPoint_D                    
+20000608  SetPoint1                     
+2000060c  SetPoint2                     
+20000618  encoder_pos                   
+2000061c  IntCtrl_Status                
+20000624  Right_Ticks                   
+20000628  Left_Ticks                    
+20000660  SetPoint_S                    
+20000668  __stack                       
+20000868  __STACK_END                   
+20000868  __STACK_TOP                   
+20000874  receive_buffer_1              
+20000880  sending_buffer_1              
+2000088c  value_string_1                
+20000898  TICKS                         
+200008a0  TICKS1                        
+200008a8  delta_t                       
+200008b0  distance                      
+200008b8  prevTime                      
+200008c0  velWheel                      
+200008c8  Fractional_part_esp_1         
+200008cc  Fractional_part_esp_2         
+200008d0  Integer_Fractional_part_esp_1 
+200008d4  Integer_Fractional_part_esp_2 
+200008d8  Integer_Part_esp_1            
+200008dc  Integer_Part_esp_2            
+200008e0  Numbers_Send_esp_1            
+200008e4  Numbers_Send_esp_2            
+200008e8  Size_FLoat                    
+200008ec  Size_Int_Left                 
+200008f0  Size_Int_Right                
+200008f4  prevWheelCount                
+200008f8  incoming_1                    
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+UNDEFED   _system_post_cinit            
+
+[159 symbols]

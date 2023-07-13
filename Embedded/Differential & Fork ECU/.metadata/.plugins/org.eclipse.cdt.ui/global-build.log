@@ -1,0 +1,463 @@
+
+**** Clean-only build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 clean -O 
+ 
+rm -rf  "PID_Test.out" 
+rm -rf "Adc.obj" "Adc_Lcfg.obj" "App.obj" "Buzzer.obj" "Dio.obj" "Dio_PBcfg.obj" "Encoder.obj" "Encoder_Lcfg.obj" "Gpt_Lcfg.obj" "Gptm.obj" "IntCtrl.obj" "IntCtrl_Lcfg.obj" "PID.obj" "PWM.obj" "PWM_Lcfg.obj" "Port.obj" "Port_Lcfg.obj" "Steering.obj" "Uart.obj" "Uart_Lcfg.obj" "main.obj" "speed.obj" "tm4c123gh6pm_startup_ccs.obj" 
+rm -rf "Adc.d" "Adc_Lcfg.d" "App.d" "Buzzer.d" "Dio.d" "Dio_PBcfg.d" "Encoder.d" "Encoder_Lcfg.d" "Gpt_Lcfg.d" "Gptm.d" "IntCtrl.d" "IntCtrl_Lcfg.d" "PID.d" "PWM.d" "PWM_Lcfg.d" "Port.d" "Port_Lcfg.d" "Steering.d" "Uart.d" "Uart_Lcfg.d" "main.d" "speed.d" "tm4c123gh6pm_startup_ccs.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+Building file: "../Encoder_Lcfg.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Encoder_Lcfg.d_raw"  "../Encoder_Lcfg.c"
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Adc_Lcfg.c", line 32: warning #190-D: enumerated type mixed with another type
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Dio.c", line 31: warning #552-D: variable "Dio_Status" was set but never used
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+"../Encoder.c", line 39: warning #552-D: variable "Encoder_Status" was set but never used
+"../IntCtrl.c", line 31: warning #552-D: variable "IntCtrl_Status" was set but never used
+"../Adc.c", line 30: warning #552-D: variable "Adc_Status" was set but never used
+Finished building: "../Encoder_Lcfg.c"
+ 
+Building file: "../Buzzer.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Buzzer.d_raw"  "../Buzzer.c"
+Finished building: "../Buzzer.c"
+ 
+Building file: "../Dio_PBcfg.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Dio_PBcfg.d_raw"  "../Dio_PBcfg.c"
+Finished building: "../Dio_PBcfg.c"
+ 
+Building file: "../IntCtrl_Lcfg.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="IntCtrl_Lcfg.d_raw"  "../IntCtrl_Lcfg.c"
+Finished building: "../IntCtrl_Lcfg.c"
+ 
+Building file: "../Adc_Lcfg.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Adc_Lcfg.d_raw"  "../Adc_Lcfg.c"
+Finished building: "../Adc_Lcfg.c"
+ 
+Building file: "../Gpt_Lcfg.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Gpt_Lcfg.d_raw"  "../Gpt_Lcfg.c"
+Finished building: "../Gpt_Lcfg.c"
+ 
+Building file: "../Dio.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Dio.d_raw"  "../Dio.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+Finished building: "../Dio.c"
+ 
+Building file: "../Encoder.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Encoder.d_raw"  "../Encoder.c"
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+Finished building: "../Encoder.c"
+ 
+Building file: "../IntCtrl.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="IntCtrl.d_raw"  "../IntCtrl.c"
+Finished building: "../IntCtrl.c"
+ 
+Building file: "../Adc.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Adc.d_raw"  "../Adc.c"
+Finished building: "../Adc.c"
+ 
+Building file: "../Port_Lcfg.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Port_Lcfg.d_raw"  "../Port_Lcfg.c"
+Finished building: "../Port_Lcfg.c"
+ 
+Building file: "../App.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="App.d_raw"  "../App.c"
+Finished building: "../App.c"
+ 
+Building file: "../PWM_Lcfg.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="PWM_Lcfg.d_raw"  "../PWM_Lcfg.c"
+Finished building: "../PWM_Lcfg.c"
+ 
+Building file: "../Uart_Lcfg.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Uart_Lcfg.d_raw"  "../Uart_Lcfg.c"
+Finished building: "../Uart_Lcfg.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../speed.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="speed.d_raw"  "../speed.c"
+"../speed.c", line 46: warning #112-D: statement is unreachable
+"../speed.c", line 48: warning #112-D: statement is unreachable
+"../speed.c", line 50: warning #112-D: statement is unreachable
+"../speed.c", line 52: warning #112-D: statement is unreachable
+"../speed.c", line 54: warning #112-D: statement is unreachable
+"../speed.c", line 56: warning #112-D: statement is unreachable
+"../speed.c", line 58: warning #112-D: statement is unreachable
+"../speed.c", line 60: warning #112-D: statement is unreachable
+"../speed.c", line 62: warning #112-D: statement is unreachable
+"../speed.c", line 64: warning #112-D: statement is unreachable
+"../speed.c", line 66: warning #112-D: statement is unreachable
+"../speed.c", line 68: warning #994-D: missing return statement at end of non-void function "speedValue"
+Finished building: "../speed.c"
+ 
+Building file: "../tm4c123gh6pm_startup_ccs.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.d_raw"  "../tm4c123gh6pm_startup_ccs.c"
+Finished building: "../tm4c123gh6pm_startup_ccs.c"
+ 
+Building file: "../PID.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="PID.d_raw"  "../PID.c"
+"../PID.c", line 18: warning #179-D: variable "output" was declared but never referenced
+Finished building: "../PID.c"
+ 
+Building file: "../Steering.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Steering.d_raw"  "../Steering.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+Finished building: "../Steering.c"
+ 
+Building file: "../Uart.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Uart.d_raw"  "../Uart.c"
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Uart.c", line 31: warning #552-D: variable "Uart_Status" was set but never used
+Finished building: "../Uart.c"
+ 
+Building file: "../Port.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Port.d_raw"  "../Port.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Port.c", line 31: warning #552-D: variable "Port_Status" was set but never used
+Finished building: "../Port.c"
+ 
+Building file: "../Gptm.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Gptm.d_raw"  "../Gptm.c"
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Gpt_Regs.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gpt_Regs.h", line 12: warning #1921-D: white space is required between the macro name "GPT_REG" and its replacement text
+"../Gptm.c", line 1289: warning #112-D: statement is unreachable
+"../Gptm.c", line 1292: warning #112-D: statement is unreachable
+"../Gptm.c", line 1295: warning #112-D: statement is unreachable
+"../Gptm.c", line 1299: warning #112-D: statement is unreachable
+"../Gptm.c", line 1307: warning #112-D: statement is unreachable
+"../Gptm.c", line 1310: warning #112-D: statement is unreachable
+"../Gptm.c", line 1313: warning #112-D: statement is unreachable
+"../Gptm.c", line 1317: warning #112-D: statement is unreachable
+"../Gptm.c", line 1320: warning #994-D: missing return statement at end of non-void function "Gpt_GetTimerElapsed"
+"../Gptm.c", line 1394: warning #112-D: statement is unreachable
+"../Gptm.c", line 1397: warning #112-D: statement is unreachable
+"../Gptm.c", line 1399: warning #112-D: statement is unreachable
+"../Gptm.c", line 1401: warning #112-D: statement is unreachable
+"../Gptm.c", line 1410: warning #112-D: statement is unreachable
+"../Gptm.c", line 1413: warning #112-D: statement is unreachable
+"../Gptm.c", line 1415: warning #112-D: statement is unreachable
+"../Gptm.c", line 1417: warning #112-D: statement is unreachable
+"../Gptm.c", line 1420: warning #994-D: missing return statement at end of non-void function "Gpt_TimerRemaining"
+"../Gptm.c", line 1502: warning #177-D: subscript out of range
+"../Gptm.c", line 31: warning #552-D: variable "Gpt_Status" was set but never used
+Finished building: "../Gptm.c"
+ 
+Building file: "../PWM.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="PWM.d_raw"  "../PWM.c"
+"../PWM_Regs.h", line 56: warning #1-D: last line of file ends without a newline
+"../PWM.c", line 34: warning #552-D: variable "delay" was set but never used
+"../PWM.c", line 732: warning #9-D: nested comment is not allowed
+"../PWM.c", line 734: warning #9-D: nested comment is not allowed
+"../PWM.c", line 31: warning #552-D: variable "PWM_Status" was set but never used
+Finished building: "../PWM.c"
+ 
+Building target: "PID_Test.out"
+Invoking: Arm Linker
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"PID_Test.map" --heap_size=0 --stack_size=512 -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="PID_Test_linkInfo.xml" --rom_model -o "PID_Test.out" "./Adc.obj" "./Adc_Lcfg.obj" "./App.obj" "./Buzzer.obj" "./Dio.obj" "./Dio_PBcfg.obj" "./Encoder.obj" "./Encoder_Lcfg.obj" "./Gpt_Lcfg.obj" "./Gptm.obj" "./IntCtrl.obj" "./IntCtrl_Lcfg.obj" "./PID.obj" "./PWM.obj" "./PWM_Lcfg.obj" "./Port.obj" "./Port_Lcfg.obj" "./Steering.obj" "./Uart.obj" "./Uart_Lcfg.obj" "./main.obj" "./speed.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "PID_Test.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+Building file: "../App.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="App.d_raw"  "../App.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+Finished building: "../App.c"
+ 
+Building target: "PID_Test.out"
+Invoking: Arm Linker
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"PID_Test.map" --heap_size=0 --stack_size=512 -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="PID_Test_linkInfo.xml" --rom_model -o "PID_Test.out" "./Adc.obj" "./Adc_Lcfg.obj" "./App.obj" "./Buzzer.obj" "./Dio.obj" "./Dio_PBcfg.obj" "./Encoder.obj" "./Encoder_Lcfg.obj" "./Gpt_Lcfg.obj" "./Gptm.obj" "./IntCtrl.obj" "./IntCtrl_Lcfg.obj" "./PID.obj" "./PWM.obj" "./PWM_Lcfg.obj" "./Port.obj" "./Port_Lcfg.obj" "./Steering.obj" "./Uart.obj" "./Uart_Lcfg.obj" "./main.obj" "./speed.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "PID_Test.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+Building file: "../App.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="App.d_raw"  "../App.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+Finished building: "../App.c"
+ 
+Building target: "PID_Test.out"
+Invoking: Arm Linker
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"PID_Test.map" --heap_size=0 --stack_size=512 -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="PID_Test_linkInfo.xml" --rom_model -o "PID_Test.out" "./Adc.obj" "./Adc_Lcfg.obj" "./App.obj" "./Buzzer.obj" "./Dio.obj" "./Dio_PBcfg.obj" "./Encoder.obj" "./Encoder_Lcfg.obj" "./Gpt_Lcfg.obj" "./Gptm.obj" "./IntCtrl.obj" "./IntCtrl_Lcfg.obj" "./PID.obj" "./PWM.obj" "./PWM_Lcfg.obj" "./Port.obj" "./Port_Lcfg.obj" "./Steering.obj" "./Uart.obj" "./Uart_Lcfg.obj" "./main.obj" "./speed.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "PID_Test.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+Building file: "../App.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="App.d_raw"  "../App.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+Finished building: "../App.c"
+ 
+Building target: "PID_Test.out"
+Invoking: Arm Linker
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"PID_Test.map" --heap_size=0 --stack_size=512 -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="PID_Test_linkInfo.xml" --rom_model -o "PID_Test.out" "./Adc.obj" "./Adc_Lcfg.obj" "./App.obj" "./Buzzer.obj" "./Dio.obj" "./Dio_PBcfg.obj" "./Encoder.obj" "./Encoder_Lcfg.obj" "./Gpt_Lcfg.obj" "./Gptm.obj" "./IntCtrl.obj" "./IntCtrl_Lcfg.obj" "./PID.obj" "./PWM.obj" "./PWM_Lcfg.obj" "./Port.obj" "./Port_Lcfg.obj" "./Steering.obj" "./Uart.obj" "./Uart_Lcfg.obj" "./main.obj" "./speed.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "PID_Test.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+gmake[1]: 'PID_Test.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+gmake[1]: 'PID_Test.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+Building file: "../App.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="App.d_raw"  "../App.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+Finished building: "../App.c"
+ 
+Building target: "PID_Test.out"
+Invoking: Arm Linker
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"PID_Test.map" --heap_size=0 --stack_size=512 -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="PID_Test_linkInfo.xml" --rom_model -o "PID_Test.out" "./Adc.obj" "./Adc_Lcfg.obj" "./App.obj" "./Buzzer.obj" "./Dio.obj" "./Dio_PBcfg.obj" "./Encoder.obj" "./Encoder_Lcfg.obj" "./Gpt_Lcfg.obj" "./Gptm.obj" "./IntCtrl.obj" "./IntCtrl_Lcfg.obj" "./PID.obj" "./PWM.obj" "./PWM_Lcfg.obj" "./Port.obj" "./Port_Lcfg.obj" "./Steering.obj" "./Uart.obj" "./Uart_Lcfg.obj" "./main.obj" "./speed.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "PID_Test.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+Building file: "../App.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="App.d_raw"  "../App.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+Finished building: "../App.c"
+ 
+Building target: "PID_Test.out"
+Invoking: Arm Linker
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"PID_Test.map" --heap_size=0 --stack_size=512 -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="PID_Test_linkInfo.xml" --rom_model -o "PID_Test.out" "./Adc.obj" "./Adc_Lcfg.obj" "./App.obj" "./Buzzer.obj" "./Dio.obj" "./Dio_PBcfg.obj" "./Encoder.obj" "./Encoder_Lcfg.obj" "./Gpt_Lcfg.obj" "./Gptm.obj" "./IntCtrl.obj" "./IntCtrl_Lcfg.obj" "./PID.obj" "./PWM.obj" "./PWM_Lcfg.obj" "./Port.obj" "./Port_Lcfg.obj" "./Steering.obj" "./Uart.obj" "./Uart_Lcfg.obj" "./main.obj" "./speed.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "PID_Test.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+Building file: "../App.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="App.d_raw"  "../App.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+Finished building: "../App.c"
+ 
+Building target: "PID_Test.out"
+Invoking: Arm Linker
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"PID_Test.map" --heap_size=0 --stack_size=512 -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="PID_Test_linkInfo.xml" --rom_model -o "PID_Test.out" "./Adc.obj" "./Adc_Lcfg.obj" "./App.obj" "./Buzzer.obj" "./Dio.obj" "./Dio_PBcfg.obj" "./Encoder.obj" "./Encoder_Lcfg.obj" "./Gpt_Lcfg.obj" "./Gptm.obj" "./IntCtrl.obj" "./IntCtrl_Lcfg.obj" "./PID.obj" "./PWM.obj" "./PWM_Lcfg.obj" "./Port.obj" "./Port_Lcfg.obj" "./Steering.obj" "./Uart.obj" "./Uart_Lcfg.obj" "./main.obj" "./speed.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "PID_Test.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+gmake[1]: 'PID_Test.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+gmake[1]: 'PID_Test.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project PID_Test ****
+
+/home/elsayed/CODE_Composer/ccs1220/ccs/utils/bin/gmake -k -j 12 all -O 
+ 
+Building file: "../App.c"
+Invoking: Arm Compiler
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/elsayed/CODE_Composer/ECU2/PID_Test" --include_path="/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="App.d_raw"  "../App.c"
+"../Port_Regs.h", line 53: warning #1-D: last line of file ends without a newline
+"../Dio.h", line 95: warning #1-D: last line of file ends without a newline
+"../Gptm.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm.h", line 12: warning #1921-D: white space is required between the macro name "GPTM" and its replacement text
+"../Gptm_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Gptm_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "GPTM_CFG" and its replacement text
+"../Uart_Cfg.h", line 76: warning #48-D: incompatible redefinition of macro "STOP_BIT" (declared at line 50)
+"../Encoder.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER" and its replacement text
+"../Encoder_Cfg.h", line 11: warning #14-D: extra text after expected end of preprocessing directive
+"../Encoder_Cfg.h", line 12: warning #1921-D: white space is required between the macro name "ENCODER_CFG" and its replacement text
+Finished building: "../App.c"
+ 
+Building target: "PID_Test.out"
+Invoking: Arm Linker
+"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"PID_Test.map" --heap_size=0 --stack_size=512 -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/elsayed/CODE_Composer/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="PID_Test_linkInfo.xml" --rom_model -o "PID_Test.out" "./Adc.obj" "./Adc_Lcfg.obj" "./App.obj" "./Buzzer.obj" "./Dio.obj" "./Dio_PBcfg.obj" "./Encoder.obj" "./Encoder_Lcfg.obj" "./Gpt_Lcfg.obj" "./Gptm.obj" "./IntCtrl.obj" "./IntCtrl_Lcfg.obj" "./PID.obj" "./PWM.obj" "./PWM_Lcfg.obj" "./Port.obj" "./Port_Lcfg.obj" "./Steering.obj" "./Uart.obj" "./Uart_Lcfg.obj" "./main.obj" "./speed.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "PID_Test.out"
+ 
+
+**** Build Finished ****
