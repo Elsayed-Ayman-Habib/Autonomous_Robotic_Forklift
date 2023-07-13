@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/libfreenect.h
+stdint.h
+-
+winsock.h
+-
+sys/time.h
+-
+
+/home/forklift2023/libfreenect/examples/camtest.c
+signal.h
+-
+stdbool.h
+-
+stdio.h
+-
+string.h
+-
+libfreenect.h
+/home/forklift2023/libfreenect/examples/libfreenect.h
+

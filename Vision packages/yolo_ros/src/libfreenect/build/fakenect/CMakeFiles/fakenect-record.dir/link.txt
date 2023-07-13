@@ -1,0 +1,1 @@
+/usr/bin/cc -Wall -O2   -rdynamic CMakeFiles/fakenect-record.dir/record.c.o CMakeFiles/fakenect-record.dir/parson.c.o  -o ../bin/fakenect-record -Wl,-rpath,/home/forklift2023/libfreenect/build/lib: ../lib/libfreenect.so.0.7.0 -lm -lusb-1.0 

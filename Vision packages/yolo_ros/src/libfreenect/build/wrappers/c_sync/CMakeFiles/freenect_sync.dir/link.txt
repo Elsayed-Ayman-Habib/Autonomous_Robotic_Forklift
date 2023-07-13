@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -O2   -shared -Wl,-soname,libfreenect_sync.so.0 -o ../../lib/libfreenect_sync.so.0.7.0 CMakeFiles/freenect_sync.dir/libfreenect_sync.c.o -Wl,-rpath,/home/forklift2023/libfreenect/build/lib: ../../lib/libfreenect.so.0.7.0 -lpthread -lusb-1.0 

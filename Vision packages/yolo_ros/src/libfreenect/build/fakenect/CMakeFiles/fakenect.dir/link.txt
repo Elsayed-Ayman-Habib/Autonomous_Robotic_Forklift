@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -O2   -shared -Wl,-soname,libfakenect.so.0 -o ../lib/fakenect/libfakenect.so.0.7.0 CMakeFiles/fakenect.dir/fakenect.c.o CMakeFiles/fakenect.dir/parson.c.o CMakeFiles/fakenect.dir/__/src/registration.c.o -lm 
