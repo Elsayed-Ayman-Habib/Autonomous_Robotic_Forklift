@@ -1,0 +1,328 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:AssemblyGTQ id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/GearTeq/GearTeq%202021%2C%20Version%3D2021.29.1.561%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<m_strFullAssyName id="ref-4">C:\MY Data\Forklift Graduation Project\Mechanical\differential\Assemblygears2.gtqasm</m_strFullAssyName>
+<m_strComponent href="#ref-5"/>
+<m_colAssyPositions href="#ref-6"/>
+<m_intPlanetMode>None</m_intPlanetMode>
+<m_intPlanets>0</m_intPlanets>
+<m_dblRPM>60</m_dblRPM>
+<m_intStream href="#ref-7"/>
+<m_dblStream href="#ref-8"/>
+<m_blnStream href="#ref-9"/>
+<m_strStream0 xsi:null="1"/>
+<m_strStream1 xsi:null="1"/>
+<m_strStream2 xsi:null="1"/>
+<m_strStream3 xsi:null="1"/>
+<m_strStream4 xsi:null="1"/>
+<m_strStream5 xsi:null="1"/>
+<m_strStream6 xsi:null="1"/>
+<m_strStream7 xsi:null="1"/>
+<m_strStream8 xsi:null="1"/>
+<m_strStream9 xsi:null="1"/>
+</a1:AssemblyGTQ>
+<SOAP-ENC:Array id="ref-5" SOAP-ENC:arrayType="xsd:string[2]">
+</SOAP-ENC:Array>
+<a3:Collection id="ref-6" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Microsoft.VisualBasic/Microsoft.VisualBasic%2C%20Version%3D10.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db03f5f7f11d50a3a">
+<Keys href="#ref-10"/>
+<KeysCount>0</KeysCount>
+<Values href="#ref-11"/>
+<CultureInfo href="#ref-12"/>
+</a3:Collection>
+<SOAP-ENC:Array id="ref-7" SOAP-ENC:arrayType="xsd:int[10]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-8" SOAP-ENC:arrayType="xsd:double[10]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-9" SOAP-ENC:arrayType="xsd:boolean[10]">
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-10" SOAP-ENC:arrayType="xsd:string[2]">
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-11" SOAP-ENC:arrayType="xsd:anyType[2]">
+<item href="#ref-13"/>
+<item href="#ref-14"/>
+</SOAP-ENC:Array>
+<a4:CultureInfo id="ref-12" xmlns:a4="http://schemas.microsoft.com/clr/ns/System.Globalization">
+<m_isReadOnly>true</m_isReadOnly>
+<compareInfo href="#ref-15"/>
+<textInfo href="#ref-16"/>
+<numInfo href="#ref-17"/>
+<dateTimeInfo xsi:null="1"/>
+<calendar xsi:null="1"/>
+<m_dataItem>0</m_dataItem>
+<cultureID>1033</cultureID>
+<m_name id="ref-18">en-US</m_name>
+<m_useUserOverride>true</m_useUserOverride>
+</a4:CultureInfo>
+<a1:AssyPosition id="ref-13" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/GearTeq/GearTeq%202021%2C%20Version%3D2021.29.1.561%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<m_strComponentName id="ref-20">Bevel01_2</m_strComponentName>
+<m_strComponentPath xsi:null="1"/>
+<m_strPositionName id="ref-21">apBevel01</m_strPositionName>
+<m_intMateType>None</m_intMateType>
+<m_CBColor>
+<name xsi:null="1"/>
+<value>0</value>
+<knownColor>35</knownColor>
+<state>1</state>
+</m_CBColor>
+<m_dblRPM>60</m_dblRPM>
+<m_blnBackLashNormalDirection>true</m_blnBackLashNormalDirection>
+<m_blnFlipLineOfAction>false</m_blnFlipLineOfAction>
+<m_blnCenterDistanceLocked>false</m_blnCenterDistanceLocked>
+<m_blnBelongsToPlanetSet>false</m_blnBelongsToPlanetSet>
+<m_dblCenterDistanceSpur>0</m_dblCenterDistanceSpur>
+<m_dblCenterDistanceChain>0</m_dblCenterDistanceChain>
+<m_dblCenterDistanceGearBelt>0</m_dblCenterDistanceGearBelt>
+<m_dblCenterDistanceVeeBelt>0</m_dblCenterDistanceVeeBelt>
+<m_dblCenterDistanceLocked>0</m_dblCenterDistanceLocked>
+<m_dblCenterDistanceExtension>0</m_dblCenterDistanceExtension>
+<m_dblCoefficientOfFriction>0</m_dblCoefficientOfFriction>
+<m_dblSpurContactRatio>0</m_dblSpurContactRatio>
+<m_dblApproachLength>0</m_dblApproachLength>
+<m_dblRecessLength>0</m_dblRecessLength>
+<m_dblContactRatioFace>0</m_dblContactRatioFace>
+<m_blnXYLocked>false</m_blnXYLocked>
+<m_dblX>0</m_dblX>
+<m_dblY>0</m_dblY>
+<m_dblZ>0</m_dblZ>
+<m_dblSumofPitchAngles>90</m_dblSumofPitchAngles>
+<m_strMate id="ref-22"></m_strMate>
+<m_sngMateAngle>0</m_sngMateAngle>
+<m_sngMateCompensateAngle>0</m_sngMateCompensateAngle>
+<m_intGearType>Driver</m_intGearType>
+<m_intStream href="#ref-23"/>
+<m_dblStream href="#ref-24"/>
+<m_blnStream href="#ref-25"/>
+<m_strStream0 xsi:null="1"/>
+<m_strStream1 xsi:null="1"/>
+<m_strStream2 xsi:null="1"/>
+<m_strStream3 xsi:null="1"/>
+<m_strStream4 xsi:null="1"/>
+<m_strStream5 xsi:null="1"/>
+<m_strStream6 xsi:null="1"/>
+<m_strStream7 xsi:null="1"/>
+<m_strStream8 xsi:null="1"/>
+<m_strStream9 xsi:null="1"/>
+</a1:AssyPosition>
+<a1:AssyPosition id="ref-14" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/GearTeq/GearTeq%202021%2C%20Version%3D2021.29.1.561%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<m_strComponentName id="ref-26">Bevel02_2</m_strComponentName>
+<m_strComponentPath xsi:null="1"/>
+<m_strPositionName id="ref-27">apBevel02</m_strPositionName>
+<m_intMateType>Gear</m_intMateType>
+<m_CBColor>
+<name xsi:null="1"/>
+<value>0</value>
+<knownColor>35</knownColor>
+<state>1</state>
+</m_CBColor>
+<m_dblRPM>60</m_dblRPM>
+<m_blnBackLashNormalDirection>true</m_blnBackLashNormalDirection>
+<m_blnFlipLineOfAction>false</m_blnFlipLineOfAction>
+<m_blnCenterDistanceLocked>false</m_blnCenterDistanceLocked>
+<m_blnBelongsToPlanetSet>false</m_blnBelongsToPlanetSet>
+<m_dblCenterDistanceSpur>0</m_dblCenterDistanceSpur>
+<m_dblCenterDistanceChain>0</m_dblCenterDistanceChain>
+<m_dblCenterDistanceGearBelt>0</m_dblCenterDistanceGearBelt>
+<m_dblCenterDistanceVeeBelt>0</m_dblCenterDistanceVeeBelt>
+<m_dblCenterDistanceLocked>0</m_dblCenterDistanceLocked>
+<m_dblCenterDistanceExtension>0</m_dblCenterDistanceExtension>
+<m_dblCoefficientOfFriction>0</m_dblCoefficientOfFriction>
+<m_dblSpurContactRatio>0</m_dblSpurContactRatio>
+<m_dblApproachLength>0</m_dblApproachLength>
+<m_dblRecessLength>0</m_dblRecessLength>
+<m_dblContactRatioFace>0</m_dblContactRatioFace>
+<m_blnXYLocked>false</m_blnXYLocked>
+<m_dblX>0</m_dblX>
+<m_dblY>0</m_dblY>
+<m_dblZ>0</m_dblZ>
+<m_dblSumofPitchAngles>90</m_dblSumofPitchAngles>
+<m_strMate href="#ref-21"/>
+<m_sngMateAngle>0</m_sngMateAngle>
+<m_sngMateCompensateAngle>0.314159274</m_sngMateCompensateAngle>
+<m_intGearType>Driver</m_intGearType>
+<m_intStream href="#ref-28"/>
+<m_dblStream href="#ref-29"/>
+<m_blnStream href="#ref-30"/>
+<m_strStream0 xsi:null="1"/>
+<m_strStream1 xsi:null="1"/>
+<m_strStream2 xsi:null="1"/>
+<m_strStream3 xsi:null="1"/>
+<m_strStream4 xsi:null="1"/>
+<m_strStream5 xsi:null="1"/>
+<m_strStream6 xsi:null="1"/>
+<m_strStream7 xsi:null="1"/>
+<m_strStream8 xsi:null="1"/>
+<m_strStream9 xsi:null="1"/>
+</a1:AssyPosition>
+<a4:CompareInfo id="ref-15" xmlns:a4="http://schemas.microsoft.com/clr/ns/System.Globalization">
+<m_name id="ref-31">en-US</m_name>
+<win32LCID>0</win32LCID>
+<culture>1033</culture>
+<m_SortVersion xsi:null="1"/>
+</a4:CompareInfo>
+<a4:TextInfo id="ref-16" xmlns:a4="http://schemas.microsoft.com/clr/ns/System.Globalization">
+<m_listSeparator xsi:null="1"/>
+<m_isReadOnly>true</m_isReadOnly>
+<m_cultureName href="#ref-18"/>
+<customCultureName href="#ref-18"/>
+<m_nDataItem>0</m_nDataItem>
+<m_useUserOverride>false</m_useUserOverride>
+<m_win32LangID>1033</m_win32LangID>
+</a4:TextInfo>
+<a4:NumberFormatInfo id="ref-17" xmlns:a4="http://schemas.microsoft.com/clr/ns/System.Globalization">
+<numberGroupSizes href="#ref-32"/>
+<currencyGroupSizes href="#ref-33"/>
+<percentGroupSizes href="#ref-32"/>
+<positiveSign id="ref-34">+</positiveSign>
+<negativeSign id="ref-35">-</negativeSign>
+<numberDecimalSeparator id="ref-36">.</numberDecimalSeparator>
+<numberGroupSeparator id="ref-37">,</numberGroupSeparator>
+<currencyGroupSeparator id="ref-38">,</currencyGroupSeparator>
+<currencyDecimalSeparator id="ref-39">.</currencyDecimalSeparator>
+<currencySymbol id="ref-40">$</currencySymbol>
+<ansiCurrencySymbol xsi:null="1"/>
+<nanSymbol id="ref-41">NaN</nanSymbol>
+<positiveInfinitySymbol id="ref-42">∞</positiveInfinitySymbol>
+<negativeInfinitySymbol id="ref-43">-∞</negativeInfinitySymbol>
+<percentDecimalSeparator href="#ref-36"/>
+<percentGroupSeparator href="#ref-37"/>
+<percentSymbol id="ref-44">%</percentSymbol>
+<perMilleSymbol id="ref-45">‰</perMilleSymbol>
+<nativeDigits href="#ref-46"/>
+<m_dataItem>0</m_dataItem>
+<numberDecimalDigits>2</numberDecimalDigits>
+<currencyDecimalDigits>2</currencyDecimalDigits>
+<currencyPositivePattern>0</currencyPositivePattern>
+<currencyNegativePattern>0</currencyNegativePattern>
+<numberNegativePattern>1</numberNegativePattern>
+<percentPositivePattern>1</percentPositivePattern>
+<percentNegativePattern>1</percentNegativePattern>
+<percentDecimalDigits>2</percentDecimalDigits>
+<digitSubstitution>1</digitSubstitution>
+<isReadOnly>true</isReadOnly>
+<m_useUserOverride>false</m_useUserOverride>
+<m_isInvariant>false</m_isInvariant>
+<validForParseAsNumber>true</validForParseAsNumber>
+<validForParseAsCurrency>true</validForParseAsCurrency>
+</a4:NumberFormatInfo>
+<SOAP-ENC:Array id="ref-23" SOAP-ENC:arrayType="xsd:int[10]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-24" SOAP-ENC:arrayType="xsd:double[10]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-25" SOAP-ENC:arrayType="xsd:boolean[10]">
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-28" SOAP-ENC:arrayType="xsd:int[10]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-29" SOAP-ENC:arrayType="xsd:double[10]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-30" SOAP-ENC:arrayType="xsd:boolean[10]">
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+<item>False</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-32" SOAP-ENC:arrayType="xsd:int[1]">
+<item>3</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-33" SOAP-ENC:arrayType="xsd:int[1]">
+<item>3</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-46" SOAP-ENC:arrayType="xsd:string[10]">
+<item id="ref-47">0</item>
+<item id="ref-48">1</item>
+<item id="ref-49">2</item>
+<item id="ref-50">3</item>
+<item id="ref-51">4</item>
+<item id="ref-52">5</item>
+<item id="ref-53">6</item>
+<item id="ref-54">7</item>
+<item id="ref-55">8</item>
+<item id="ref-56">9</item>
+</SOAP-ENC:Array>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

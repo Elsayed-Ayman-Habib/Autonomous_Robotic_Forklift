@@ -1,0 +1,322 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:Bevel id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/GearTeq/GearTeq%202021%2C%20Version%3D2021.29.1.561%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<m_blnFlipBackLash href="#ref-5"/>
+<m_enmToothModification href="#ref-6"/>
+<m_dblToothModification href="#ref-7"/>
+<m_dblToothLength href="#ref-8"/>
+<m_strAGMA_Class xsi:null="1"/>
+<m_dblAddendumCoef>1</m_dblAddendumCoef>
+<m_dblClearanceCoef>0.188</m_dblClearanceCoef>
+<m_dblFilletCoef>0.282</m_dblFilletCoef>
+<m_strHandOfSpiral>Right_Hand</m_strHandOfSpiral>
+<m_dblFaceWidth>13</m_dblFaceWidth>
+<m_intNumberOfTeeth>16</m_intNumberOfTeeth>
+<m_dblSpiralAngle>0</m_dblSpiralAngle>
+<m_dblBacklash>0</m_dblBacklash>
+<m_blnBackAngleManual>false</m_blnBackAngleManual>
+<m_dblBackAngle>45</m_dblBackAngle>
+<m_blnFrontAngleManual>false</m_blnFrontAngleManual>
+<m_dblFrontAngle>45</m_dblFrontAngle>
+<m_dblInvoluteTrochoidRadius href="#ref-9"/>
+<m_dblDiametralPitch>6.35</m_dblDiametralPitch>
+<m_dblPressureAngle>20</m_dblPressureAngle>
+<m_dblSumofPitchAngle>90</m_dblSumofPitchAngle>
+<m_dblShaftAngle>90</m_dblShaftAngle>
+<m_blnModification>false</m_blnModification>
+<m_dblAddendumModification>0</m_dblAddendumModification>
+<m_dblAddModCoef>-0.28031249999999985</m_dblAddModCoef>
+<m_dblKFactor>0</m_dblKFactor>
+<m_dblToothThickness>5.4674372673034668</m_dblToothThickness>
+<m_intDiametralPitch>Diametral</m_intDiametralPitch>
+<m_KeywayPosition>On_Space_Center</m_KeywayPosition>
+<m_strTeethToPattern>Maximum</m_strTeethToPattern>
+<m_strManufacturingMethod>Gleason</m_strManufacturingMethod>
+<m_dblCrownToBack>17.849999904632568</m_dblCrownToBack>
+<m_dblWeb>0</m_dblWeb>
+<m_dblFaceAngle>63.490395067204545</m_dblFaceAngle>
+<m_dblBodyWidth>0</m_dblBodyWidth>
+<m_intBevelType>0</m_intBevelType>
+<m_dblFormulaToothThickness>0</m_dblFormulaToothThickness>
+<m_dblHubProjectionSide href="#ref-10"/>
+<m_dblRPM href="#ref-11"/>
+<m_dblPitchAngle>57.994616791916506</m_dblPitchAngle>
+<m_dblAddendum>2.878749956765513</m_dblAddendum>
+<Bushing href="#ref-12"/>
+<m_sngX href="#ref-13"/>
+<m_sngY href="#ref-14"/>
+<m_sngZ href="#ref-15"/>
+<Annotation href="#ref-16"/>
+<m_colAuxiliarySketch xsi:null="1"/>
+<m_dblHypoidOffset>0</m_dblHypoidOffset>
+<m_dblHypoidCrossingPoint>0</m_dblHypoidCrossingPoint>
+<m_dblHypoidFaceApexToCrossingPoint>0</m_dblHypoidFaceApexToCrossingPoint>
+<m_dblCrowning>0</m_dblCrowning>
+<m_intStream href="#ref-17"/>
+<m_dblStream href="#ref-18"/>
+<m_strStream0 xsi:null="1"/>
+<m_strStream1 xsi:null="1"/>
+<m_strStream2 xsi:null="1"/>
+<m_strStream3 xsi:null="1"/>
+<m_strStream4 xsi:null="1"/>
+<m_strStream5 xsi:null="1"/>
+<m_strStream6 xsi:null="1"/>
+<m_strStream7 xsi:null="1"/>
+<m_strStream8 xsi:null="1"/>
+<m_strStream9 xsi:null="1"/>
+<m_sngServiceFactor>1</m_sngServiceFactor>
+<m_sngTensileStrengthUltimatePSI>0</m_sngTensileStrengthUltimatePSI>
+<m_sngSpecificWeightofMaterial>0</m_sngSpecificWeightofMaterial>
+<m_sngModulusOfElasticityKSI>1.5E+07</m_sngModulusOfElasticityKSI>
+<m_sngSafeBendingStressPSI>20000</m_sngSafeBendingStressPSI>
+<m_sngCompressiveYieldStrengthPSI>0</m_sngCompressiveYieldStrengthPSI>
+<m_sngPoissonsRatio>0.3</m_sngPoissonsRatio>
+<m_sngShrinkageRate>0</m_sngShrinkageRate>
+<m_sngBrinellHardness>150</m_sngBrinellHardness>
+<m_enmMaterial>0</m_enmMaterial>
+<m_blnBackLashNormalDirection href="#ref-19"/>
+<m_blnCreateWithArcs>false</m_blnCreateWithArcs>
+<m_IsLocked>false</m_IsLocked>
+<m_dblZDistance href="#ref-20"/>
+<m_sngMateAngle href="#ref-21"/>
+<m_sngMateCompensateAngle href="#ref-22"/>
+<m_intUnits>Metric</m_intUnits>
+<m_intInstance>0</m_intInstance>
+<m_intMateGroup>1</m_intMateGroup>
+<m_clrColor>
+<name xsi:null="1"/>
+<value>0</value>
+<knownColor>78</knownColor>
+<state>1</state>
+</m_clrColor>
+<m_intMateType href="#ref-23"/>
+<m_strSpringUnits id="ref-24">lb/in</m_strSpringUnits>
+<m_strVelocityUnits id="ref-25">in/sec</m_strVelocityUnits>
+<m_strName id="ref-26">Bevel01_2</m_strName>
+<m_strFullPathName id="ref-27">C:\MY Data\Forklift Graduation Project\Mechanical\differential\Bevel01_2.gtc</m_strFullPathName>
+<m_strInternalID id="ref-28"> 245389702</m_strInternalID>
+<m_strPassWord xsi:null="1"/>
+<m_strMate href="#ref-29"/>
+<Materials_x002B_m_sngServiceFactor>1</Materials_x002B_m_sngServiceFactor>
+<Materials_x002B_m_sngTensileStrengthUltimatePSI>0</Materials_x002B_m_sngTensileStrengthUltimatePSI>
+<Materials_x002B_m_sngSpecificWeightofMaterial>0</Materials_x002B_m_sngSpecificWeightofMaterial>
+<Materials_x002B_m_sngModulusOfElasticityKSI>1.5E+07</Materials_x002B_m_sngModulusOfElasticityKSI>
+<Materials_x002B_m_sngSafeBendingStressPSI>20000</Materials_x002B_m_sngSafeBendingStressPSI>
+<Materials_x002B_m_sngCompressiveYieldStrengthPSI>0</Materials_x002B_m_sngCompressiveYieldStrengthPSI>
+<Materials_x002B_m_sngPoissonsRatio>0.3</Materials_x002B_m_sngPoissonsRatio>
+<Materials_x002B_m_sngShrinkageRate>0</Materials_x002B_m_sngShrinkageRate>
+<Materials_x002B_m_sngBrinellHardness>150</Materials_x002B_m_sngBrinellHardness>
+<Materials_x002B_m_enmMaterial>0</Materials_x002B_m_enmMaterial>
+<Materials_x002B_m_blnBackLashNormalDirection href="#ref-19"/>
+<Materials_x002B_m_blnCreateWithArcs>false</Materials_x002B_m_blnCreateWithArcs>
+<Materials_x002B_m_IsLocked>false</Materials_x002B_m_IsLocked>
+<Materials_x002B_m_dblZDistance href="#ref-20"/>
+<Materials_x002B_m_sngMateAngle href="#ref-21"/>
+<Materials_x002B_m_sngMateCompensateAngle href="#ref-22"/>
+<Materials_x002B_m_intUnits>Metric</Materials_x002B_m_intUnits>
+<Materials_x002B_m_intInstance>0</Materials_x002B_m_intInstance>
+<Materials_x002B_m_intMateGroup>1</Materials_x002B_m_intMateGroup>
+<Materials_x002B_m_clrColor>
+<name xsi:null="1"/>
+<value>0</value>
+<knownColor>78</knownColor>
+<state>1</state>
+</Materials_x002B_m_clrColor>
+<Materials_x002B_m_intMateType href="#ref-23"/>
+<Materials_x002B_m_strSpringUnits href="#ref-24"/>
+<Materials_x002B_m_strVelocityUnits href="#ref-25"/>
+<Materials_x002B_m_strName href="#ref-26"/>
+<Materials_x002B_m_strFullPathName href="#ref-27"/>
+<Materials_x002B_m_strInternalID href="#ref-28"/>
+<Materials_x002B_m_strPassWord xsi:null="1"/>
+<Materials_x002B_m_strMate href="#ref-29"/>
+<HubBore_x002B_intHub href="#ref-30"/>
+<HubBore_x002B_m_blnSS>false</HubBore_x002B_m_blnSS>
+<HubBore_x002B_m_intSpurPinionSetScrew>0</HubBore_x002B_m_intSpurPinionSetScrew>
+<HubBore_x002B_m_MountingStyle>None</HubBore_x002B_m_MountingStyle>
+<HubBore_x002B_m_BushingSide>Bushing_on_1st_Side</HubBore_x002B_m_BushingSide>
+<HubBore_x002B_m_Keyway>Bore_only</HubBore_x002B_m_Keyway>
+<HubBore_x002B_m_BushingModeling>Create_as_component_feature</HubBore_x002B_m_BushingModeling>
+<HubBore_x002B_m_strSS xsi:null="1"/>
+<HubBore_x002B_m_strTaperBushing xsi:null="1"/>
+<HubBore_x002B_m_dblHubDiameterSide href="#ref-31"/>
+<HubBore_x002B_m_dblHubProjectionSide href="#ref-32"/>
+<HubBore_x002B_m_dblHubFilletSide href="#ref-33"/>
+<HubBore_x002B_m_dblBore>16</HubBore_x002B_m_dblBore>
+<HubBore_x002B_m_dblBoreChamfer>0.25399999618530272</HubBore_x002B_m_dblBoreChamfer>
+<HubBore_x002B_m_blnBackLashNormalDirection href="#ref-19"/>
+<HubBore_x002B_m_blnCreateWithArcs>false</HubBore_x002B_m_blnCreateWithArcs>
+<HubBore_x002B_m_IsLocked>false</HubBore_x002B_m_IsLocked>
+<HubBore_x002B_m_dblZDistance href="#ref-20"/>
+<HubBore_x002B_m_sngMateAngle href="#ref-21"/>
+<HubBore_x002B_m_sngMateCompensateAngle href="#ref-22"/>
+<HubBore_x002B_m_intUnits>Metric</HubBore_x002B_m_intUnits>
+<HubBore_x002B_m_intInstance>0</HubBore_x002B_m_intInstance>
+<HubBore_x002B_m_intMateGroup>1</HubBore_x002B_m_intMateGroup>
+<HubBore_x002B_m_clrColor>
+<name xsi:null="1"/>
+<value>0</value>
+<knownColor>78</knownColor>
+<state>1</state>
+</HubBore_x002B_m_clrColor>
+<HubBore_x002B_m_intMateType href="#ref-23"/>
+<HubBore_x002B_m_strSpringUnits href="#ref-24"/>
+<HubBore_x002B_m_strVelocityUnits href="#ref-25"/>
+<HubBore_x002B_m_strName href="#ref-26"/>
+<HubBore_x002B_m_strFullPathName href="#ref-27"/>
+<HubBore_x002B_m_strInternalID href="#ref-28"/>
+<HubBore_x002B_m_strPassWord xsi:null="1"/>
+<HubBore_x002B_m_strMate href="#ref-29"/>
+<Mating_x002B_m_blnBackLashNormalDirection href="#ref-19"/>
+<Mating_x002B_m_blnCreateWithArcs>false</Mating_x002B_m_blnCreateWithArcs>
+<Mating_x002B_m_IsLocked>false</Mating_x002B_m_IsLocked>
+<Mating_x002B_m_dblZDistance href="#ref-20"/>
+<Mating_x002B_m_sngMateAngle href="#ref-21"/>
+<Mating_x002B_m_sngMateCompensateAngle href="#ref-22"/>
+<Mating_x002B_m_intUnits>Metric</Mating_x002B_m_intUnits>
+<Mating_x002B_m_intInstance>0</Mating_x002B_m_intInstance>
+<Mating_x002B_m_intMateGroup>1</Mating_x002B_m_intMateGroup>
+<Mating_x002B_m_clrColor>
+<name xsi:null="1"/>
+<value>0</value>
+<knownColor>78</knownColor>
+<state>1</state>
+</Mating_x002B_m_clrColor>
+<Mating_x002B_m_intMateType href="#ref-23"/>
+<Mating_x002B_m_strSpringUnits href="#ref-24"/>
+<Mating_x002B_m_strVelocityUnits href="#ref-25"/>
+<Mating_x002B_m_strName href="#ref-26"/>
+<Mating_x002B_m_strFullPathName href="#ref-27"/>
+<Mating_x002B_m_strInternalID href="#ref-28"/>
+<Mating_x002B_m_strPassWord xsi:null="1"/>
+<Mating_x002B_m_strMate href="#ref-29"/>
+</a1:Bevel>
+<SOAP-ENC:Array id="ref-5" SOAP-ENC:arrayType="xsd:boolean[1]">
+<item>False</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-6" SOAP-ENC:arrayType="a1:ToothProfileModification[2]" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/GearTeq/GearTeq%202021%2C%20Version%3D2021.29.1.561%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<item>None</item>
+<item>None</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-7" SOAP-ENC:arrayType="xsd:double[2]">
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-8" SOAP-ENC:arrayType="xsd:double[2]">
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-9" SOAP-ENC:arrayType="xsd:double[2]">
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-10" SOAP-ENC:arrayType="xsd:double[3]">
+<item>0</item>
+<item>11.5</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-11" SOAP-ENC:arrayType="xsd:double[1]">
+<item>0</item>
+</SOAP-ENC:Array>
+<a1:Bushing id="ref-12" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/GearTeq/GearTeq%202021%2C%20Version%3D2021.29.1.561%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+</a1:Bushing>
+<SOAP-ENC:Array id="ref-13" SOAP-ENC:arrayType="xsd:float[1]">
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-14" SOAP-ENC:arrayType="xsd:float[1]">
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-15" SOAP-ENC:arrayType="xsd:float[1]">
+<item>0</item>
+</SOAP-ENC:Array>
+<a1:AnnotationBevel id="ref-16" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/GearTeq/GearTeq%202021%2C%20Version%3D2021.29.1.561%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<m_blnDiameterPitch>true</m_blnDiameterPitch>
+<m_blnNumberofTeeth>true</m_blnNumberofTeeth>
+<m_blnPitchDiametral>true</m_blnPitchDiametral>
+<m_blnModuleTransverse>true</m_blnModuleTransverse>
+<m_blnPressureAngle>true</m_blnPressureAngle>
+<m_blnToothThickness>true</m_blnToothThickness>
+<m_blnPitchCircular>true</m_blnPitchCircular>
+<m_blnAddendum>true</m_blnAddendum>
+<m_blnDedendum>true</m_blnDedendum>
+<m_blnWholeDepth>true</m_blnWholeDepth>
+<m_blnModificationAddendum>true</m_blnModificationAddendum>
+<m_blnModificationAddendumCoefficient>true</m_blnModificationAddendumCoefficient>
+<m_blnBacklash>true</m_blnBacklash>
+<m_blnAGMAQualityClass>true</m_blnAGMAQualityClass>
+<m_blnAngleFace>true</m_blnAngleFace>
+<m_blnAngleRoot>true</m_blnAngleRoot>
+<m_blnAngleShaft>true</m_blnAngleShaft>
+<m_blnAlpha>true</m_blnAlpha>
+<m_blnBeta>true</m_blnBeta>
+<m_blnGamma>true</m_blnGamma>
+<m_blnDelta>true</m_blnDelta>
+<m_blnEpsilon>true</m_blnEpsilon>
+<m_blnZeta>true</m_blnZeta>
+<m_blnEta>true</m_blnEta>
+<m_blnTheta>true</m_blnTheta>
+</a1:AnnotationBevel>
+<SOAP-ENC:Array id="ref-17" SOAP-ENC:arrayType="xsd:int[10]">
+<item>1</item>
+<item>8</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-18" SOAP-ENC:arrayType="xsd:double[10]">
+<item>0</item>
+<item>34.5</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>5.8732499117926364</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-19" SOAP-ENC:arrayType="xsd:boolean[1]">
+<item>True</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-20" SOAP-ENC:arrayType="xsd:double[1]">
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-21" SOAP-ENC:arrayType="xsd:float[1]">
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-22" SOAP-ENC:arrayType="xsd:float[1]">
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-23" SOAP-ENC:arrayType="a1:MateType[1]" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/GearTeq/GearTeq%202021%2C%20Version%3D2021.29.1.561%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<item>None</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-29" SOAP-ENC:arrayType="xsd:string[1]">
+<item id="ref-34"></item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-30" SOAP-ENC:arrayType="xsd:boolean[3]">
+<item>False</item>
+<item>False</item>
+<item>False</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-31" SOAP-ENC:arrayType="xsd:double[3]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-32" SOAP-ENC:arrayType="xsd:double[3]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-33" SOAP-ENC:arrayType="xsd:double[3]">
+<item>0</item>
+<item>0</item>
+<item>0</item>
+</SOAP-ENC:Array>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
