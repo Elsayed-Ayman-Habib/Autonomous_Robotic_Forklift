@@ -1,0 +1,7 @@
+<launch>
+ 
+   <include file="$(find darknet_ros)/launch/darknet_ros.launch"/>
+
+   <node pkg="coordinate_estimation" type="coordinate_estimation" name="Coordinate_Estimation" output="screen"/>
+
+</launch>

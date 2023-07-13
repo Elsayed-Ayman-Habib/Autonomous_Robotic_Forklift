@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/forklift2023/yolo_ros/devel/setup.sh

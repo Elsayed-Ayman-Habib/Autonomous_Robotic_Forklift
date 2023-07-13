@@ -1,0 +1,8 @@
+prefix=/home/forklift2023/yolo_ros/devel
+
+Name: coordinate_estimation
+Description: Description of coordinate_estimation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp darknet_ros_msgs sensor_msgs position_msgs
