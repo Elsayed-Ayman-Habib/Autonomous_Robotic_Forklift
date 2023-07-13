@@ -1,0 +1,164 @@
+<!-- Forklift Team & Data : 06/07/2023
+
+<!-- 
+  Simulate a carlike robot with the teb_local_planner in stage:
+  - stage
+  - map_server
+  - move_base
+  - static map
+  - amcl
+  - rviz view
+ -->
+ 
+ 
+<launch>
+
+<!-- Wheel Encoder Tick Publisher and Base Controller Using Arduino --> 
+  <!-- motor_controller_diff_drive_2.ino is the Arduino sketch -->
+  <!-- Subscribe: /cmd_vel -->
+  <!-- Publish: /right_ticks, /left_ticks -->
+ 
+<node pkg="rosserial_python" type="serial_node.py" name="my_serial_node">
+  <param name="port" value="/dev/ttyUSB0"/>
+  <param name="baud" value="115200"/>
+  <param name="time_offset" value="0.0"/>
+  <param name="timeout" value="0.1"/>
+  <param name="min_used_space" value="1024"/>
+ <!-- <param name="buffer_size" value="1024"/>  Set the buffer size here -->
+</node>
+        <!--  ************** Global Parameters ***************  -->
+
+
+
+        <!--  ************** Robot Simulator ***************
+		 <remap from="base_scan" to="nassef"/>  -->
+	  <node pkg="stage_ros" type="stageros" name="stageros" args="$(find teb_local_planner_tutorials)/stage/maze_carlike.world">
+		  <remap from="tf" to="ff"/>
+ 			<remap from="odom" to="uuu" />
+  	</node> 
+
+	
+
+	  <!--  **************** Visualisation ****************  -->
+	  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find teb_local_planner_tutorials)/cfg/rviz_navigation.rviz"/>
+
+                <!--  **************** EXtra **************** 
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser_frame"  args="0.06 0 0.08 0 0 0 base_link laser_frame 30" /> -->
+        <!-- Transformation Configuration ... Setting Up the Relationships Between Coordinate Frames -->
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser4" args="0.0 0.0 0.2 0.0 0.0 0.0 /base_link /laser_frame 30.0" />
+      <node pkg="tf" type="static_transform_publisher" name="imu_link" args="0 0.06 0.02 0 0 0 base_link imu_link 30.0" />
+        <node pkg="tf" type="static_transform_publisher" name="base_link_broadcaster" args="0 0 0.09 0 0 0 base_footprint base_link 30.0" />
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0 0 0 0 0 0 map odom 30.0" />
+
+
+
+
+
+
+  <!-- odom to base_footprint transform will be provided by the robot_pose_ekf node -->
+ 
+ 
+  <!-- Wheel Odometry Publisher -->
+  <!-- Subscribe: /right_ticks, /left_ticks, /initial_2d -->
+  <!-- Publish: /odom_data_euler, /odom_data_quat -->
+  <node pkg="localization_data_pub" type="ekf_odom_pub" name="ekf_odom_pub">
+  </node> 
+  
+   <!-- simple_navigation_goals -->
+  <!-- Subscribe:barcode / zbar_ros -->s
+
+<node pkg="simple_navigation_goals" type="simple_navigation_goals" name="simple_navigation_goals">
+  </node> 
+     
+  <!-- IMU Data Publisher Using the mpu_6050 IMU Sensor -->
+  <!-- Publish: /imu/data -->
+<!-- 0x68 == 104 is the default for mpu_6050 
+   <node  name="imu_node" pkg="mpu_6050_driver" type="imu_node.py" respawn="true" respawn_delay="2">
+    <param name="device" type="string" value="/dev/i2c-1"/>
+    <param name="address" type="int" value="104"/> 
+    <param name="frame_id" type="string" value="imu"/>
+  </node>-->
+     
+  <!-- Extended Kalman Filter from robot_pose_ekf Node-->
+  <!-- Subscribe: /odom, /imu_data, /vo -->
+  <!-- Publish: /robot_pose_ekf/odom_combined -->
+  
+    <remap from="odom" to="odom_data_quat" />
+   <remap from="imu_data" to="imu/data" />   
+    
+  <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
+
+    <param name="output_frame" value="odom"/>
+    <param name="base_footprint_frame" value="base_footprint"/>
+    <param name="freq" value="30.0"/>
+    <param name="sensor_timeout" value="1.0"/>
+    <param name="odom_used" value="true"/>
+    <param name="imu_used" value="false"/>
+    <param name="vo_used" value="false"/>
+    <param name="gps_used" value="false"/>
+    <param name="debug" value="false"/>
+    <param name="self_diagnose" value="false"/>
+
+   
+  </node>
+     
+  <!-- Initial Pose and Goal Publisher -->
+  <!-- Publish: /initialpose, /move_base_simple/goal -->
+   <node pkg="initial_pose_publisher" type="initial_pose_publisher_node" name="rviz_initial_pose">
+         
+ </node> 
+   
+  <!-- Subscribe: /initialpose, /move_base_simple/goal -->
+  <!-- Publish: /initial_2d, /goal_2d -->
+   
+    <node pkg="localization_data_pub" type="rviz_click_to_2d" name="rviz_click_to_2d"></node> 
+    
+    
+
+<!-- Lidar Data Publisher Using RPLIDAR from Slamtec -->
+<!-- Used for obstacle avoidance and can be used for mapping -->
+<!-- Publish: /scan -->
+ 
+    
+  <include file="$(find ydlidar_ros_driver)/launch/X4.launch" />    
+
+
+<!--  ****** Maps *****  -->
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find teb_local_planner_tutorials)/maps/warsha_better.yaml" output="screen">
+                <param name="frame_id" value="map"/>
+	</node>
+
+	<node pkg="amcl" type="amcl" name="amcl" output="screen">
+		<rosparam file="$(find teb_local_planner_tutorials)/cfg/amcl_params.yaml" command="load" />
+
+	        <param name="initial_pose_x"            value="50"/>
+		<param name="initial_pose_y"            value="50"/>
+		<param name="initial_pose_a"            value="0"/>
+
+               <!--/odometry/filtered-->
+          
+	</node>
+
+ <!--  ************** Navigation ***************  -->
+	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+  	  	<rosparam file="$(find teb_local_planner_tutorials)/cfg/carlike/costmap_common_params.yaml" command="load" ns="global_costmap" />
+  	 	<rosparam file="$(find teb_local_planner_tutorials)/cfg/carlike/costmap_common_params.yaml" command="load" ns="local_costmap" />
+  		<rosparam file="$(find teb_local_planner_tutorials)/cfg/carlike/local_costmap_params.yaml" command="load" />
+  		<rosparam file="$(find teb_local_planner_tutorials)/cfg/carlike/global_costmap_params.yaml" command="load" />
+  		<rosparam file="$(find teb_local_planner_tutorials)/cfg/carlike/teb_local_planner_params.yaml" command="load" />
+
+		<param name="base_global_planner" value="global_planner/GlobalPlanner" />
+		<param name="planner_frequency" value="1.0" />
+		<param name="planner_patience" value="5.0" />
+
+		<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+		<param name="controller_frequency" value="5.0" />
+		<param name="controller_patience" value="15.0" />
+
+                <param name="clearing_rotation_allowed" value="false" /> <!-- Our carlike robot is not able to rotate in place -->
+
+	</node>
+
+  
+
+</launch>
