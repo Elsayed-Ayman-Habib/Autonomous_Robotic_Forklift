@@ -10,5 +10,4 @@ We employed computer vision techniques using a pretrained YOLO CNN for object de
 
 The successful integration of ROS for Navigation and Localization in our project has advanced our understanding of robotics and equipped us with the skills necessary to contribute to the future of autonomous systems. I am proud of my team's accomplishments and look forward to further exploring innovation in robotics, leveraging cutting-edge technologies like ROS to redefine human-robot interaction.
 
-Link of Video --> https://drive.google.com/drive/folders/1iCM8DTQ_ik3RJ6Gb64cmEPBjMHCCbpft?usp=sharing
-
+[![what is git] ((https://github.com/Elsayed-Ayman-Habib/Autonomous_Robotic_Forklift/assets/107988619/528d5d41-2414-4fe0-9ef4-ca977f35a104)](https://drive.google.com/drive/folders/1iCM8DTQ_ik3RJ6Gb64cmEPBjMHCCbpft?usp=sharing)
