@@ -10,4 +10,19 @@ We employed computer vision techniques using a pretrained YOLO CNN for object de
 
 The successful integration of ROS for Navigation and Localization in our project has advanced our understanding of robotics and equipped us with the skills necessary to contribute to the future of autonomous systems. I am proud of my team's accomplishments and look forward to further exploring innovation in robotics, leveraging cutting-edge technologies like ROS to redefine human-robot interaction.
 
+##Tutorial
+### Hardware
+- Nvidia Jetson TX2
+- 2 Tiva-C
+- Arduino Mega (as buffer)
+- 2 Encoders and 2 DC motors
+- Potentiometer
+- Batteries (2 for system (24V-24A) - 1 for Jetson (12V-12A))
+- YDLidar
+- Kinect V1
+- Linear Fork DC Motor
+- VNH5019 DC Motor Driver
+- relay module
+- Emergency Stop Position
+  
 Link of Video --> https://drive.google.com/drive/folders/1iCM8DTQ_ik3RJ6Gb64cmEPBjMHCCbpft?usp=sharing
