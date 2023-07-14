@@ -154,7 +154,7 @@ roslaunch freenect_launch freenect.launch depth_registration:=true
 roslaunch freenect_launch freenect.launch depth_registration:=true
 roslaunch teb_local_planner_tutorials robot_carlike_in_stage.launch #the package launch
 ```
-# Link of Video 
+# Link of Report & Presentation and Video 
 - https://drive.google.com/drive/folders/1iCM8DTQ_ik3RJ6Gb64cmEPBjMHCCbpft?usp=sharing
 
 # Final Product 
