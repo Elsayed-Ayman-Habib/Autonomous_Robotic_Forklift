@@ -1,0 +1,17 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"left_wheel" [label="left_wheel"];
+"right_wheel" [label="right_wheel"];
+"steering_angle" [label="steering_angle"];
+"steering_wheel" [label="steering_wheel"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "leftaxisdiff" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leftaxisdiff" -> "left_wheel"
+"base_link" -> "rightaxisdiff" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"rightaxisdiff" -> "right_wheel"
+"base_link" -> "steeringangleaxis" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"steeringangleaxis" -> "steering_angle"
+"base_link" -> "steeringwheelaxis" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"steeringwheelaxis" -> "steering_wheel"
+}
