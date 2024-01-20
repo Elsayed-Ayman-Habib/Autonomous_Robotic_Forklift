@@ -164,8 +164,8 @@ roslaunch teb_local_planner_tutorials robot_carlike_in_stage.launch #the package
 Abdelrahman Mahmoud Ehab
 Abdelrahman Mostafa Mahmoud
 Abdelrhman Motawea Ali     
-Abedlrahman Omar Abdelhalem
-Anas Ahmed Talaat          
+Abdelrahman Omar Abdelhalem  
+Anas Ahmed Talaat                
 El Sayed Ayman El Sayed     
 Mahmoud Ayman Abdelaziz     
 Mahmoud Tariq Mahmoud      
