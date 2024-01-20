@@ -159,6 +159,15 @@ roslaunch teb_local_planner_tutorials robot_carlike_in_stage.launch #the package
 
 # Final Product 
 <img src="https://github.com/Elsayed-Ayman-Habib/Autonomous_Robotic_Forklift/assets/107988619/e7f68b60-7d39-44e9-9d71-92c8798ba960">
-
+# BY:
+Abdelrahman Mahmoud Ehab
+Abdelrahman Mostafa Mahmoud
+Abdelrhman Motawea Ali
+Abedlrahman Omar Abdelhalem
+Anas Ahmed Talaat
+El Sayed Ayman El Sayed
+Mahmoud Ayman Abdelaziz
+Mahmoud Tariq Mahmoud
+Mahmoud Nassef Mohamed
 # Thanks our Team
 <img src="https://github.com/Elsayed-Ayman-Habib/Autonomous_Robotic_Forklift/assets/107988619/925d7e94-7c8c-4a84-9a63-44f17b58ee5b">
